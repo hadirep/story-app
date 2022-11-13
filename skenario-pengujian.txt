@@ -1,0 +1,53 @@
+- Repository :
+	1. StoryRepository :
+	   a.) register :
+		- Memastikan data tidak kosong/null
+		- Memastikan mengembalikan Result.Success
+	   b.) login : 
+		- Memastikan data tidak kosong/null
+        - Memastikan mengembalikan Result.Success
+	   c.) getAllStory :
+		- Memastikan data tidak kosong/null
+		- Mendapatkan hasil yang diharapkan
+		- Mengecek apakah data yang didapat memiliki ukuran yang sesuai dengan yang diharapkan 
+	   d.) addNewStory : 
+		- Memastikan data tidak kosong/null
+        - Memastikan mengembalikan Result.Success
+	   e.) getMaps :
+		- Memastikan data tidak kosong/null
+        - Memastikan mengembalikan Result.Success
+
+- ViewModel :
+	1. RegisterViewModel :
+	   a.) Ketika pengguna berhasil daftar/register :	
+	       	- Memastikan mengembalikan Result.Success
+	   b.) Ketika pengguna gagal daftar/register :
+	       	- Memastikan mengembalikan Result.Error
+
+	2. LoginViewModel :
+       a.) Ketika pengguna berhasil masuk/login :
+		- Memastikan data tidak kosong/null
+		- Mengembalikan Result.Success
+ 	   b.) Ketika pengguna gagal masuk/login :
+		- Memastikan mengembalikan Result.Error
+
+	3. MainViewModel :
+	   a.) Ketika berhasil memuat data list story : 
+		- Memastikan data tidak kosong/null
+		- Memastikan jumlah data sesuai dengan yang diharapkan
+		- Memastikan jika isi data sesuai dengan yang diharapkan
+
+	4. AddStoryViewModel :
+	   a.) Ketika pengguna berhasil menambah cerita/add story :
+		- Memastikan data tidak kosong/null
+		- Mengembalikan Result.Success
+	   b.) Ketika pengguna gagal menambah cerita/add story :
+		- Memastikan mengembalikan Result.Error
+
+	5. MapsViewModel :
+	   a.) Ketika pengguna berhasil melihat peta/maps :
+		- Mengembalikan Result.Success
+		- Memastikan data tidak kosong/null
+		- Memastikan jumlah data sesuai dengan yang diharapkan
+	   b.) Ketika pengguna gagal melihat peta/maps :
+		- Mengembalikan Result.Error
