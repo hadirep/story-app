@@ -11,26 +11,26 @@ import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.narvenia.submission2storyapp.adapter.StoryAdapter.ViewHolder
+import com.narvenia.submission2storyapp.adapter.StoryAdapter.ListViewHolder
 import com.narvenia.submission2storyapp.data.remote.response.ListStoryItem
 import com.narvenia.submission2storyapp.databinding.ItemRowUserBinding
 import com.narvenia.submission2storyapp.ui.detail.DetailActivity
 
-class StoryAdapter : PagingDataAdapter<ListStoryItem, ViewHolder>(DIFF_CALLBACK){
+class StoryAdapter : PagingDataAdapter<ListStoryItem, ListViewHolder>(DIFF_CALLBACK){
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val binding = ItemRowUserBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return ViewHolder(binding)
+        return ListViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         val story = getItem(position)
         if (story != null) {
             holder.bind(story)
         }
     }
 
-    class ViewHolder(private val binding: ItemRowUserBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ListViewHolder(private val binding: ItemRowUserBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(item: ListStoryItem) {
             binding.apply{
                 Glide.with(itemView.context)
